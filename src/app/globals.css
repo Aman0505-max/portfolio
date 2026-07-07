@@ -1,0 +1,162 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+html.light {
+  color-scheme: light;
+}
+
+body {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+html.light body {
+  background-color: #ffffff !important;
+  color: #111111 !important;
+}
+
+* {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+html.light * {
+  border-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+::selection {
+  background-color: rgba(239, 68, 68, 0.3);
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #444444;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #666666;
+}
+
+.glass {
+  background: #111111 !important;
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+}
+
+html.light .glass {
+  background: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.08);
+}
+
+.glass-card {
+  background: #111111 !important;
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.75rem;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+}
+
+html.light .glass-card {
+  background: #ffffff !important;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.06);
+}
+
+.gradient-text {
+  color: #ef4444;
+  font-weight: 700;
+}
+
+.container-custom {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.section-padding {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+@media (min-width: 768px) {
+  .container-custom {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .section-padding {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-custom {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* ============================================
+   LIGHT MODE OVERRIDES
+   ============================================ */
+
+html.light .bg-background { background-color: #ffffff !important; }
+html.light .bg-background-secondary { background-color: #f8f9fa !important; }
+html.light .bg-background-tertiary { background-color: #f0f0f0 !important; }
+html.light .bg-background-card { background-color: #ffffff !important; }
+
+html.light .text-foreground { color: #111111 !important; }
+html.light .text-foreground-secondary { color: #555555 !important; }
+html.light .text-foreground-tertiary { color: #888888 !important; }
+html.light .text-foreground-muted { color: #aaaaaa !important; }
+
+html.light .bg-background\/80 { background-color: rgba(255,255,255,0.8) !important; }
+html.light .bg-background-secondary\/50 { background-color: rgba(248,249,250,0.5) !important; }
+html.light .bg-background-secondary\/80 { background-color: rgba(248,249,250,0.8) !important; }
+
+html.light .hover\:bg-background-tertiary:hover { background-color: #f0f0f0 !important; }
+html.light .hover\:bg-background-card:hover { background-color: #f8f9fa !important; }
+html.light .hover\:text-foreground:hover { color: #111111 !important; }
+
+html.light .shadow-glass { box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.08) !important; }
+html.light .shadow-glow { box-shadow: 0 0 20px rgba(239, 68, 68, 0.15) !important; }
+html.light .shadow-glow-lg { box-shadow: 0 0 40px rgba(239, 68, 68, 0.2) !important; }
+
+html.light .bg-accent-from\/10 { background-color: rgba(239, 68, 68, 0.1) !important; }
+html.light .bg-accent-from\/20 { background-color: rgba(239, 68, 68, 0.2) !important; }
+html.light .bg-accent-from\/30 { background-color: rgba(239, 68, 68, 0.3) !important; }
+
+html.light ::-webkit-scrollbar-track { background: #f0f0f0; }
+html.light ::-webkit-scrollbar-thumb { background: #cccccc; }
+html.light ::-webkit-scrollbar-thumb:hover { background: #aaaaaa; }
+
+html.light .bg-red-500\/10 { background-color: rgba(239, 68, 68, 0.1) !important; }
+html.light .bg-green-500\/10 { background-color: rgba(34, 197, 94, 0.1) !important; }
+html.light .bg-yellow-500\/10 { background-color: rgba(245, 158, 11, 0.1) !important; }
+
+html.light .bg-background-card\/50 { background-color: rgba(255,255,255,0.5) !important; }
+
+html.light .ring-offset-background { --tw-ring-offset-color: #ffffff; }
