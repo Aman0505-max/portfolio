@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -8,16 +7,6 @@ import { AIChat } from "@/components/features/AIChat/AIChat";
 import { ScrollProgress } from "@/components/features/ScrollProgress";
 import { GridBackground } from "@/components/features/GridBackground";
 import { ThemeProvider } from "@/lib/theme";
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-});
-
-const jetbrains = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-jetbrains",
-});
 
 export const metadata: Metadata = {
   title: "Aman Maan | Software Developer",
@@ -65,7 +54,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark" suppressHydrationWarning>
       <body
-        className={`${inter.variable} ${jetbrains.variable} font-sans`}
+        className="font-sans"
+        style={{
+          fontFamily: "'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif",
+        }}
         suppressHydrationWarning
       >
         <ThemeProvider>
